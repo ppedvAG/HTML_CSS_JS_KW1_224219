@@ -360,48 +360,134 @@ Konvention:
 
 
 
+        <h3>Beispiel-Tabelle</h3>
+        <table>
+            <!-- <table>: Definiert den Anfang und das Ende einer Tabelle-->
+            <thead>
+                <!-- Enthälte Informationen zu den Tabellenspalten - Überschriften -->
+                
+                <!-- tr bildet die Kopfzeilenspalte ab (Überschrift von jeder Tabellenspalte)-->
+                <tr>
+                    <th scope="col">Automarke</th>
+                    <th scope="col">Modell</th>
+                    <th scope="col">PS</th>
+                    <th scope="col">Gesamtpreis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Enthält die Datensätze -->
+                <tr>
+                    <td scope="row">VW</td>
+                    <td>Polo</td>
+                    <td>80</td>
+                    <td>7500€</td>
+                </tr>
+                <tr>
+                    <td scope="row">BMW</td>
+                    <td>Z8</td>
+                    <td>200</td>
+                    <td>30000€</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="3">Preis insgesamt: </th>
+                    <td>3700€</td>
+                </tr>
+            </tfoot>
+        </table>
 
-                <h3>Beispiel-Tabelle</h3>
-                <table>
-                    <!-- <table>: Definiert den Anfang und das Ende einer Tabelle-->
-                    <thead>
-                        <!-- Enthälte Informationen zu den Tabellenspalten - Überschriften -->
-                        
-                        <!-- tr bildet die Kopfzeilenspalte ab (Überschrift von jeder Tabellenspalte)-->
-                        <tr>
-                            <th scope="col">Automarke</th>
-                            <th scope="col">Modell</th>
-                            <th scope="col">PS</th>
-                            <th scope="col">Gesamtpreis</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Enthält die Datensätze -->
-                        <tr>
-                            <td scope="row">VW</td>
-                            <td>Polo</td>
-                            <td>80</td>
-                            <td>7500€</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">BMW</td>
-                            <td>Z8</td>
-                            <td>200</td>
-                            <td>30000€</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th scope="row" colspan="3">Preis insgesamt: </th>
-                            <td>3700€</td>
-                        </tr>
-                    </tfoot>
-                </table>
-
-        <div id="last-chapter">
-            
+        <div id="last-chapter">            
+        </div>
+        
+        
+        
+        
+        <div>
+            <h2>Links in HTML</h2>
+            <p>Um Links darzustellen benutzen wir den anchor-Tag</p>
+            <p>Der anchor-Tag mussüber das href="" Attribute verfügen</p>
+            <p>Ein häufig verwendetes Attribute für den a-Tag ist das target-Attribut</p>
+            <p>Mit dem target-Attribut können wir den Brwoser anweisen den Lin in einem neuen Tab zu öffnen</p>
+            <p>Dafür benutzen wir target="_blank"</p>
+            <a href="https://ppedv.de" target="_blank">ppedv AG</a>
+            <p>taget="_blank" wird verwendet um auf externe Webseiten zu verweisen</p>
         </div>
 
+        <div>
+            <h2>Bilder in HTML</h2>
+
+            <p>Wir haben zwei Möglichkeiten Bilder in HTML darzustellen</p>
+            <p>Die klassische Variante ist die Verwednung des img-Tags</p>
+
+
+            <!-- Es kann aber trotzdem vorkommen, dass Bilder (aufgrund einer schlechten Internetverbindung) nicht geladen werden oder Nutzer sich die Seite mit einem Screenreader vorlesen lassen.-->
+
+            <img src="https://via.placeholder.com/250x250" alt="Dieses Bild wurde in Italien aufgenommen" />
+            <p>Der img-Tag sollte über die Attribute href(Pfad/Link zum Bild) sowie alt(kurze Beschreibung des Bildes)</p>
+            <p>Platzhalterbilder: https://via.placeholder.com/BreitexHöhe</p>
+
+            <p>Es gibt gegenüber dem img-Tag eine modernere Variante -> das picture-Tag</p>
+            <picture>
+                <source media="(min-width:750px)" srcset="https://via.placeholder.com/750x750">
+                <source media="(min-width:450px)" srcset="https://via.placeholder.com/450x450">
+                <img src="https://via.placeholder.com/250x250" alt="Platzhalterbild">
+            </picture>
+            <p>Der picture-Tag selber hat keine Attribute, beinhaltet aber mindestens ein soruce-Tage und ein img-Tag, der immer als letztes geschrieben wird</p>
+            <p>Wir gehen dabei vom größten zum kleinsten Bild</p>
+            <p>Der Browser prüft von oben nach unten durch ob das benutzte Gerät die Bedingungen erfüllt und stellt das entsprechende Element dar. Wenn keine der Bedingungen (Inhalt von media) erfüllt wird nimmt er den img-Tag. Falls der Browser den pictre-Tag nicht unterstützt wird ebenfalls der img-Tag verwendet
+            </p>
+            <p>Falls eines der Bilder in den Source-Tags nicht geladen werden kann, wird der alt-Text vom img-Tag dargestellt</p>
+        </div>
+
+
+        <div>
+            <h2>Videos in HTML</h2>
+            <p>Der video-Tag funktioniert recht ähnlich wie der picture_Tag, d.h. auch hier umschließt der video-Tag eins oder mehrere source-Tags</p>
+            <p>Diesmal definieren die source-Tags aber die Dateiendung des Videos und der Browser nimmt sich das erste kompatible Format</p>
+
+            <video muted controls poster="https://via.placeholder.com/320x180">
+                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                <source src="https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg" type="video/ogg">
+            </video>
+
+            <h3>Attribute des video-Tags</h3>
+            <ul>
+                <li>autoplay - Boolesches Attributr also brauchen wir keinen Wert, startet das Video automatisch sobald man die Seite betritt</li>
+                <li>muted - Boolesches Attribut, das Video wird standarmäßig stumm abespielt</li>
+                <li>controls - Boolesches Attribut, stellt eine Benutzeroberfläche für das Video zur Verfügung</li>
+                <li>loop - Boolesches Attribut, lässt das Video nach durchlauf erneut beginnen</li>
+                <li>poster - Bild das dargestellt wird, wenn das Video nicht gestartet wurde, Wert entspricht Pfad/Link zum Bild</li>
+            </ul>
+            <a href="https://en.wikipedia.org/wiki/HTML5_video#Browser_support">Unterstützte Formate nach Browser</a>
+        </div>
+
+
+
+        <div>
+            <h2 class="chapter-heading">Das class-Attribute</h2>
+            <p>Ermöglicht, dass wir mehrere HTML-Elemente die eine Klasse zuweisen können. Die hat vorerst keinerlei Auswirkung auf die betroffenen Elemente. Klassen geben uns die Möglichkeit ein oder mehrer Elemente in CSS gezielter zu stylen. bzw. oder in JavaScript anzusprechen</p>
+            <h3>Best Practise</h3>
+            <ul>
+                <li>Klasse sollte Funktion des Elements beschreiben</li>
+                <li>Klasse sollte kleingeschrieben sein</li>
+                <li>Klasse sollte nach Kebab-Case Konvention geschrieben werden</li>
+                <li>Kebab-Case: erste-zweite-dritte; Bindestriche zwischen den Wörtern</li>
+                <li>camelCase wird auch oft benutzt</li>
+                <li>camelCase: ersteZweiteDritte</li>
+                <li>ACHTUNG: Klassenname ist case-sensitive, d.h. Groß-, Kleinschreibung ist wichtig</li>
+
+
+
+                <a href="Index2.html#javaScriptSection">Gehe zum letzten Kapitel</a>
+                
+            </ul>
+            
+        
+        </div>
     </body>
 </html>
+
+
+
 

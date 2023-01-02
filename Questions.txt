@@ -1,0 +1,1 @@
+ScreenReader -> img->alt-Attribute -> ScreenReader fähig? 
