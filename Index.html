@@ -1,0 +1,273 @@
+<!DOCTYPE html> 
+
+<!-- 
+
+    Synatax: 
+    Beispiel1:
+    <START-TAG>Content</END-TAG>
+    <Tagname>Inhalt</Tagname>
+-----------------------------------------
+    Beispiel 2: 
+    <Tagname /> : Selbstschließeder Tag
+-----------------------------------------
+Konvention: 
+    Tagnamen sollen klein geschrieben werden
+    Tags können verschachtelbar sein -> Tabellen, Auflistungen oder Formualre
+-->
+
+<html>
+    <head>
+        <!-- Der head enthält Metainformationen über unsere Seite, wie. z.B. Titel, Stylesheets-Eindingungen, Skripte -->
+        
+
+        <!-- Was im Browser in der Titelleiste oder Tab angezeigt wird -->
+        <title>
+            Meine erste HMTL Seite
+        </title>
+
+        <!-- Weist den Browser welche encodierung verwendet werden soll -->
+        <meta charset="utf-8">
+        <meta name="description" content="Ich bin der Text, der in der Google/Bing Suche unter dem Title der Seiter erscheint">
+        
+        
+        <!-- Dieser meta-Tag stellt die Breite des Dokuments auf die Breite des genuttzten Gerätes/Browsers ein und definiert den angänglichen Zoom-Faktor -->
+        <meta name="viewport" content="widh=device-width,initial-scale=1">
+
+        <!-- 
+            Shortcut in Visual Studio Code:
+                html:5 => Tab drücken
+                Generiert uns doctype + html + head und body
+        -->
+        
+    </head>
+    <body>
+        <!-- Der body enthält den tatsächlichen sichtbaren Inhalt unserer Seite. Darf nur einmal pro HTML-Dokument vorkommen -->
+
+        <!-- Einfaches DIV-Sample mit Style-Rule Hintergrundfarbe = blau / rot / gelb
+        <div style="background-color:blue; height: 100px;">
+
+        </div>
+        <div style="background-color:red; height: 100px">
+
+        </div>
+        <div style="background-color:yellow; height: 100px;">
+
+        </div>
+        -->
+
+        <!-- Aufbau eines Menüs--> 
+        <div>
+            <!-- Steht für eine Division, also eine Unterteilung des HTML-Bereichs-->
+            <!-- Benutzt man um die Steite in eiznelne Bereiche aufzigliedern, z.B in eine Navigationsleiste und den tatsächlichen Inhalt -->  
+            <ul>
+                <!--'ul' Steht für ungeordnete Liste und wird standardgemäß alös Liste mit Aufzählungspunkten dargestellt -->
+                <li>
+                    <!-- Ist ein Listen-Eintrag und ist ein Aufzählungspunkt -->
+
+                    <!-- Im Falle einer Navigationsleiste enthält das list item anchor-Tags-->
+                    <a href="#">Home</a>
+                    <!-- Ein anchor-Tag verlinkt immer auf eine andere Seite, kann sowohl auf unsere eigenen Seite sein oder auf eine anderen Seite-->
+                    <!-- Der a-Tag muss über das href Attribut verfügen-->
+                </li>
+                <li>
+                    <a href="https://de.wikipedia.org/">externe Seite</a>
+                </li>
+                <li>
+                    <!-- mit target="_blank" können wir eine Seite in einem neuen Tab öffnen-->
+                    <a href="https://de.wikipedia.org/" target="_blank">externe Seite in neuen Tab</a>
+                </li>
+
+                <li>
+                    <a href="/about.html">About me</a>
+                </li>
+
+                <li>
+                    <a href="#last-chapter">Gehe zum letztne Kapitel</a>
+                </li>
+
+                <li>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+
+        <div id="ausgaben-chapter">
+            <h1>Ich bin die Hauptüberschrift</h1>
+            <!-- Die h* - Tags gibt es von h1 (wichtigste für Hauptüberschriften) bis h6 (unwichtigstes, Untertitel) -->
+            <h6>Ich bin eine Unterüberschrift</h6>
+            <h2>Texte in HTML</h2>
+
+            <p>Ich bin ein Paragraph und beende mit einen Zeilenumbruch</p>
+            <p>Nächste Zeile</p>
+
+            <span>Ich bin eine Zeichenfolge</span>
+
+
+            <p>Unterschied zwischen p-Tag und span-Tag ist die Darstellung.
+               Der p-Tag erzwingt immer eine neue Zeile, weil er standardmäßig eine ganze Zeile an Platz beansprucht.
+            </p>
+
+            <span>Der span-Tag verbraucht nur so viel Platzwie er tatsächlich beansprucht.</span>
+            <span>
+                Ich werde nicht in einer neuen Zeile stehen.
+            </span>
+
+            <p>unnötige leerzeichen werden gelöscht      asdasd     tt</p>
+            <p>jegliche Formatierungen wird irgnoriert, außer einzelene Leerzeichen</p>
+
+            <!-- Span ingoriert auch mutliple Leerzeichen in einer Ausgabe-->
+            <span>Test Test     Test</span>
+            
+            <h3>Ausnahme:</h3>
+            <pre>Beim pre-Tag, was für preformmated Text steht, wird die Formatierung              Bei      -      behalten
+
+                Wie 
+                Man
+                sehen kann
+            </pre>
+
+            <h3 title="Tooltip">Kleines Gimmick: Tooltips</h3>
+            <p title="Ich bin ein Tooltip">Man kann bei allen Elementen Tooltips verwenden mit dem title-Attribute darstellen, also hover (bedeutet, mit dem Mauszeiger über die Ausgabe drüberfahren) </p>
+        
+            <h3>Styling von Text mittels HTML: </h3>
+            <p><strong>Um Text fett darzustellen haben wir den strong-Tag</strong> und <em>um Text kursiv darzustellen</em></p>
+            <p>Früher wurde statt dem strong-Tag der b-Tag verwendet und statt em wurde der i-Tag verwendet</p>
+            <p>Im Gegensatz zum b und i Tag werden der strong und em-Tag von Screenreadern besonders betont.</p>
+            <p>Der i-Tag wird heutzutage oft als icon-Tag verwendet</p>
+
+
+            <h3>Weitere nützliche Textelemente</h3>
+            <p>Zitate:</p>
+            <blockquote>Ich bin für längere Zitate gedacht</blockquote>
+            <q>Ich bin für kurze Zitate gedacht</q>
+
+
+
+            <p>Abkürzung:</p>
+            <abbr title="Hyper Text Markup Langugage">HTML</abbr>
+            <p>Titel oder ähnliches:</p>
+            <cite>Ich bin ein Buch/Filmtitel</cite>
+
+
+            <p>Adressen:</p>
+            <address>1000 Musterstadt</address>
+            <p>Sub / Superskript: </p>
+            <p>Für Hochzahlen z.B.</p>
+            <p>2<sup>4</sup></p>
+            <p>Quelle<sub>Fußnote</sub></p>
+
+            
+            <p>Rechtliche Hinweise:</p>
+            <small>Ich werde kleiner dargestellt als normaler Text</small>
+            
+            <p>Farbliche Markierung:</p>
+            <mark>Ich werde gelb hinterlegt</mark>
+        </div>
+
+        <div id="ListsInHTML">
+            <h2>Listen in HTML</h2>
+            <h3>Die ungeordnete Liste:</h3>
+
+            <p>Die ungeordnete Liste dient der Aufzählung von Stichpunkten, Vorbedingungen wobei alle ohne Gewichtung passiert</p>
+            <p>Das ul-Element darf entwerder li-Elemente oder andere ul-Elemente in sich verschachtelt haben</p>
+            <ul>
+                <li>ABC</li>
+                <li>DEF</li>
+                <li>GHI
+                    <ul>
+                        <li>Unterpunkt</li>
+                    </ul>
+                </li>
+            </ul>
+
+
+            <h3>Die geordnete Liste</h3>
+            <p>Dient ebenfalls der Auflistung, diesmal allerdings von Einzelschritten oder von Rankings</p>
+            <p>Das ol-Element darf entweder li-Elemente oder andere ol-Elmenete in sich enthalten</p>
+
+            <ol>
+                <li>Mehl</li>
+                <li>Eieer</li>
+                <li>Milch</li>
+                <li>Getränke
+                    <ol>
+                        <li>
+                            Cola
+                            <ol>
+                                <li>Light</li>
+                                <li>Zero</li>
+                            </ol>
+                        </li>
+                        <li>Wasser</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <h4>Die Attribute des ol-Elements</h4>
+
+            <ol>
+                <li>type</li>
+                <li>start</li>
+                <li>reversed</li>
+            </ol>
+
+            <p>Wir können diese Attribute beliebig darstellen</p>
+            
+            <p>Type: a,b,c,d,e,f,g</p>
+
+            <ol type="a" >
+                <li>a</li>
+                <li>b</li>
+            </ol>
+            <p>Mögliche werte für type:</p>
+            <ul>
+                <li>A - Zählt mit Großbuchstaben durch</li>
+                <li>a - Zählt mit Kleinbuchstaben durch</li>
+                <li>I - Zählt mit großgeschriebenen römischen Zahlen durch</li>
+                <li>i - Zählt mit kleingeschriebenen römischen Zahlen durch</li>
+                <li>1 - Zählt mit arabischen Ziffern durch, ist standard</li>
+            </ul>
+
+
+            <p>Start:</p>
+            <p>Sagt wo das Zählen beginnen soll</p>
+            <ol type="1" start="54">
+                <li>A</li>
+                <li>B</li>
+            </ol>
+
+
+            <p>reversed:</p>
+            <p>Ist ein boolesches Attribut, also ein Attribut das nur Wahr oder Falsch sein kann</p>
+            <p>Reversed dreht die Zählreihenfolge um</p>
+            <ol type="1" start="54" reversed>
+                <li>A</li>
+                <li>B</li>
+            </ol>
+
+
+            <h3>Die description Liste:</h3>
+            <p>Die dl dient nicht der Aufzählung, sondern dient der Definition von Begriffen</p>
+            <p>Die dl enthält dt - description term - und dd - description detail - Elemente</p>
+            <p>Dabei ist der dt-Tag der Begriff, der beschrieben wird und dd ist die Beschreibung selbst</p>
+
+            <dl>
+                <dt>(LABEL) HTML</dt>
+                <dd>(Text) Die meistverbreiteste Markuplanguage im Netz</dd>
+                <dt>JavaScript</dt>
+                <dd>Die meistbentutze Programmierspache im Web</dd>
+            </dl>
+        </div>
+
+
+
+        <div id="last-chapter">
+            
+        </div>
+
+    </body>
+</html>
+
