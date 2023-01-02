@@ -263,6 +263,140 @@ Konvention:
         </div>
 
 
+        <div>
+            <h2>Tabellen</h2>
+            <p>Sine in meherere Teile aufgespaltet</p>
+            <p>Verwendete Tags</p>
+
+            <ul>
+                <li>table</li>
+                <li>thead</li>
+                <li>tbody</li>
+                <li>tfoot</li>
+
+                <li>tr - Repräsentiert eine Zeile in der Tabelle</li>
+                <li>th - Table Header (Column, Spalte in der Tabelle) </li>
+                <li>td - Spalte innerhalb der Tabelle</li>
+            </ul>
+        </div>
+
+        <h3>Beispiel-Tabelle</h3>
+        <table>
+            <!-- <table>: Definiert den Anfang und das Ende einer Tabelle-->
+            <thead>
+                <!-- Enthälte Informationen zu den Tabellenspalten - Überschriften -->
+                
+                <!-- tr bildet die Kopfzeilenspalte ab (Überschrift von jeder Tabellenspalte)-->
+                <tr>
+                    <th scope="col">Produkt</th>
+                    <th scope="col">Anzahl</th>
+                    <th scope="col">Stückpreis</th>
+                    <th scope="col">Gesamtpreis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Enthält die Datensätze -->
+                <tr>
+                    <td scope="row">Laptop</td>
+                    <td>5</td>
+                    <td>1500€</td>
+                    <td>7500€</td>
+                </tr>
+                <tr>
+                    <td scope="row">Monitor</td>
+                    <td>5</td>
+                    <td>200€</td>
+                    <td>1000€</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="3">Preis insgesamt: </th>
+                    <td>8500€</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <h3>Kreuztabellen - (Siehe tbody)</h3>
+        <table>
+            <thead>
+                <tr>
+                  <th></th>
+                  <th>Haus A</th>
+                  <th>Haus B</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>Wohnfläche</th>
+                  <td>100</td>
+                  <td>150</td>
+                </tr>
+                <tr>
+                  <th>Gartenfläche</th>
+                  <td>50</td>
+                  <td>100</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                  <th>Gesamtfläche</th>
+                  <td>150</td>
+                  <td>250</td>
+                </tr>
+                <tr>
+                  <td colspan="3">Alle Angaben in Quadratmetern.</td>
+                </tr>
+            </tfoot>
+        </table>
+
+<!-- Übung: Baue eine eigene Tabelle auf -->
+<!-- Struktur soll folgende sein -->
+
+<!-- Automarke | Modell | PS | Gesamtpreis -->
+<!--   VW      | Polo   | 80 |    15.000€  -->
+<!--   BMW     | Z8     | 200|    35.000€  -->
+        <!--    Gesamtpreis: |    40.000@ -->
+
+
+
+
+                <h3>Beispiel-Tabelle</h3>
+                <table>
+                    <!-- <table>: Definiert den Anfang und das Ende einer Tabelle-->
+                    <thead>
+                        <!-- Enthälte Informationen zu den Tabellenspalten - Überschriften -->
+                        
+                        <!-- tr bildet die Kopfzeilenspalte ab (Überschrift von jeder Tabellenspalte)-->
+                        <tr>
+                            <th scope="col">Automarke</th>
+                            <th scope="col">Modell</th>
+                            <th scope="col">PS</th>
+                            <th scope="col">Gesamtpreis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Enthält die Datensätze -->
+                        <tr>
+                            <td scope="row">VW</td>
+                            <td>Polo</td>
+                            <td>80</td>
+                            <td>7500€</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">BMW</td>
+                            <td>Z8</td>
+                            <td>200</td>
+                            <td>30000€</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row" colspan="3">Preis insgesamt: </th>
+                            <td>3700€</td>
+                        </tr>
+                    </tfoot>
+                </table>
 
         <div id="last-chapter">
             
