@@ -159,8 +159,62 @@ visibility:hidden ->      platz auf der Seite wird reserviert, Element wird aber
         Conent - der tatsächliche Inhalt z.B. Text oder Bild Elemente
         Padding - transparenter Abstand zwischen Content und Border
         Margin - Transparenter Rand um die Border herum 
+*/
 
 
+/* Die basic display Arten von CSS */
+
+/* 
+    display: block; (Basis: div)
+    Beginnen immer in einer neuen Zeile und beanspruchen die volle Breite des Elternelementes
+    Beachten height und width
+    
+    display: inline; (Basis: span)
+    Starten nicht zwingend in einer neuen Zeile und beanspruchen nur so viel Platz wie nötig
+    Ignorieren height und width
+
+    display: inline-block; (Keine Basis)
+    Kein Element ist standardmäßig inline-block, muss immer per Regel definiert werden
+    Mischt die Eigenschaften von inline und block,da es heigth und width beachtet, aber trtozdem mehere Elemente pro Zeile dargestellt werden können
+    display: none; (Keine Basis)
+    Versteckt das Element und die Seite verhält sich so als ob das Element nicht exisiteren würde
+    Wird oft in Kombi mit JavaScript benutzt um Elemente zu verstecken
+*/
+
+/* 
+    Alternative zu display:none;
+    visibility: hidden;
+    Element wird versteckt, aber es behält seinen Platz im Layout bei
+    Kann zu s.g. weißen Flecken führen, also Lücken wo eigentlich ein Element wäre, es aber durch hidden versteckt wird
+    Inzwischen größtenteils durch display: none; abeglöst
+*/
+
+
+/* Positions in CSS */
+/* 
+    position: static; 
+    Jedes HTML Element ist standardmäßig static,
+    Element wird statisch platziert und ignoriert jegliche Positionsbeeinflussende Attribute 
+    Position richtet sich nach AUfbau des HTML Codes
+
+
+    position: relative;
+    Beachtet die positionsbeeinflussenden Attribute top, bottom, left und right
+    Element verschiebt sich relativ zu seiner Standardposition
+    Andere Elemente nehmen nicht den Ursprünglichen Platz des Elementes ein
+
+    position: fixed;
+    Beachtet top, bottom, left und right
+    Element verschiebt sich relativ zum Sichtfeld
+
+    position: sticky;
+    Wechselt zwischen position: fixed und position: static;
+    Sobald man an dem Element vorbeiscrollen würde, wechselt es auf fixed und bleibt dadurch dann immer im Sichtfeld des Users
+    z.B. für Navbars
+
+    position: absolute;
+    Funktioniert ähnlich wie fixed, aber verschiebt sich nicht relativ zum sichtfeld sondern realtiv zum nächsten Vorfahren der relative oder absolute als position hat
+    Falls kein Vorfahr relative oder absolute hat wird es in Relation zum html Tag verschoben
 */
 
 
