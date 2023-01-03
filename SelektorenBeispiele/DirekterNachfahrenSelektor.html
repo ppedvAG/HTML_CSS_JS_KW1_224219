@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direkte Nachfahren-Selektor el1 > el2 {} Child-Selector</title>
+
+
+</head>
+<body>
+    <h2>Listen</h2>
+    <ul>
+        <li>ul Ungeordnete Liste</li>
+        <li>ol Ordered List</li>
+        <li>dl Description List</li>
+        <ol>
+            <li>Unterpunt</li>
+        </ol>
+    </ul>
+
+    <ol start="25" reversed type="A">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ol>
+</body>
+</html>
+
+
+<style type="text/css">
+    
+    ul > li {
+        color:blue;
+    }
+
+</style>

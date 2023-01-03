@@ -1,0 +1,172 @@
+/* Ich bin ein Kommentar */
+
+
+/* Selektoren in CSS */
+
+/*ALLGEMEIN: SYNTAX SELEKTOREN */
+/* Element-Selector / Elements-Selektor */
+/* Stylt alle Elemente des entschprechenden Typen */
+/* Syntax:
+    elementName (z.B. p) {Property:Value;}
+*/
+
+
+/* 1.) Universal-Selector */
+/* Stylt alle Elemente */
+/* Syntax: * {Regel} */
+/* Spezifität: 0, stylt also nur Elemente, für die das Property noch nicht festgelegt wurde */
+
+* {
+    color: black;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/* 2.) Id-Selector */
+/* Stylt jedes Element mit der entsprechenden ID, also im Optimalfall nur ein einziges */
+/* Syntax: #idNamen {Regel} */
+/* Ist der spezifischste Selektor */
+
+#site-top {
+    font-size: 42px;
+    color : black;
+    display: block;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/* 3.) Class-Selector */
+/* Stylt alle Elemente mit der entsprechenden Klasse */
+/* Syntax: .className {Regel} */
+/* Ist der zweitspezifischte Selektor, nach dem ID-Selektor */
+
+.cool-pargraph {
+    color :slategrey;
+    font-size: 36px;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/*Gruppenselektor  */
+td, th {
+    color: white;
+}
+
+
+/*---------------------------------------------------------------------------------------------------*/
+
+
+/*Element Selektor*/
+body {
+    background-color: orange;
+}
+
+body div {
+    height: 350px;
+    background-color: orangered;
+}
+
+body div div {
+    height: 150px;
+    background-color: red;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/* Direkte Geschwister-Selektor: el1 + el2 {} adjacent sibling selector */
+
+p + h2 {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Display Properties  */ 
+
+/* display:none -> selektierte Elemente werden unsichtbar */
+#first-paragraph {
+    display:none;
+}
+
+/* 
+    visibility: visible;
+    visibility: hidden;
+*/
+#second-paragraph {
+    visibility: hidden;
+}
+
+/* Überschreiben Sie den Standardanzeigewert */
+li {
+    display: inline;
+}
+
+/* Span-Elemente werden als Blockelemente angezeigt */ 
+span {
+    display: block;
+    float: right;
+}
+
+/* display: none VS visibility:hidden 
+
+display:none     ->      bedeutet, dass das betreffende Tag überhaupt nicht auf der Seite erscheint
+visibility:hidden ->      platz auf der Seite wird reserviert, Element wird aber nicht angezeigt
+*/
+
+
+
+
+/* Größeneinheit in CSS */
+
+/* Absolute Einheiten
+    px, Pixel 1/96 inch 
+    in, Inch ca. 2,5cm 
+    pt, Point 1/72 inch 
+    pc, Pica enspricht 12pt
+    mm, milimeter
+    cm, centimeter 
+/*
+
+/* Relativen Einheiten 
+    em, element Relativ zur Schriftgröße des Element -> 2em ensprechen der doppelten Schritgröße des Elements
+    rem, Relativ zur Schriftgröße des root-Elements (html)
+
+    vw, Relativ zu 1% der breite des Viewports (Browserfensters)
+    vh, Relativ zu 1% der höhe des Viewports (Browserfenster)
+
+    vmin, Relativ zu 1% der kleiner Seite des Viewports
+    vmax, Relativ zu 1% der größeren Seite des Viewports
+    
+    %, Relativ zur Größe des Elternelementes
+
+    ch, Relativ zur Breite der 0 der ausgewählten Schriftart
+    ex, Relativ zur Höhe der x-Achse des BUchstabens A in der derzeitigen Schriftart
+*/
+
+
+/*Box Modell
+    Von innen nach außen in mehrere Unterblöcke aufgeteilt: 
+        Conent - der tatsächliche Inhalt z.B. Text oder Bild Elemente
+        Padding - transparenter Abstand zwischen Content und Border
+        Margin - Transparenter Rand um die Border herum 
+
+
+*/
+
+
+
+
+
+*/
+
+

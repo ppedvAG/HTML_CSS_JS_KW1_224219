@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Model</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt natus esse commodi delectus placeat ratione, fugit unde nihil quam quibusdam necessitatibus quaerat maxime praesentium? Quas quibusdam odio facilis minima aspernatur.</p>
+    <div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt natus esse commodi delectus placeat ratione, fugit unde nihil quam quibusdam necessitatibus quaerat maxime praesentium? Quas quibusdam odio facilis minima aspernatur.</p>
+        </div>
+
+        <div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt natus esse commodi delectus placeat ratione, fugit unde nihil quam quibusdam necessitatibus quaerat maxime praesentium? Quas quibusdam odio facilis minima aspernatur.</p>
+            </div>
+
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt natus esse commodi delectus placeat ratione, fugit unde nihil quam quibusdam necessitatibus quaerat maxime praesentium? Quas quibusdam odio facilis minima aspernatur.</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<style type="text/css">
+   /*body {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+   }*/
+
+   body {
+     padding: 5px 5px 5px 25px; /*-> kann man auch als padding:5px zusammenfassen -> bedeutet 5px auf alle 4 Einstellungsmöglichkeiten (Top, Bottom, Left, Right)*/
+        /*top padding is 25px
+        right padding is 50px
+        bottom padding is 75px
+        left padding is 100px */
+    }
+
+    body div {
+        padding: 25px;
+        background-color: yellowgreen;
+    }
+
+    body div div {
+        padding: 15px;
+        background-color: orange;
+    }
+
+    body div div div{
+        padding: 45px;
+        border-style: solid;
+        border-width: 5px;
+        border-color: blue;
+    }
+ </style>
