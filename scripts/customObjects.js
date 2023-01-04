@@ -106,3 +106,49 @@ console.log(person2.cityOfOrigin);
 
 
 
+// Moderne Variante des Konstruktors:
+// Ist syntactic Sugar, d.h. es ist eine rein sytnaktische Verbesserung mit keiner Änderung an der Funktionalität
+
+// Mit dem Keyword class:
+
+class PersonAlt {
+
+    xyz = 123;
+
+    constructor (nameProp, age, employed, cityOfOrigin) {
+        this.name = nameProp;
+        this.age = age;
+        this.employed = employed;
+        this.cityOfOrigin = cityOfOrigin;
+    }
+
+    introduceSelf() {
+        console.log(`Hallo mein Name ist ${this.name} und ich bin ${this.age} Jahre alt`);
+    }
+}
+
+const person3 = new PersonAlt("Luke Skywalker2", 49, true, "Cologne");
+
+
+// Übung:
+// Erstelle eine Klasse Auto
+// Sie soll folgende Props besitzen:
+
+// marke
+// modell
+// motorStatus (boolean)
+// derzeitigeGeschw
+// maximaleGeschw
+
+// derzeitige Geschwindigkeit soll bei der erstellung immer 0 sein
+// motorStatus soll bei der Erstellung immer false sein
+
+// Methoden 1:
+// anAbschalten
+// Die Methode soll nur den motorStatus ändern
+
+// Methode 2:
+// Beschleunige(neueGeschw)
+// Diese Methode soll die derzeitige Geschwindigkeit auf neueGeschw setzen, außer wenn diese die maximale Geschwindigkeit 
+// überschreiten würde
+
