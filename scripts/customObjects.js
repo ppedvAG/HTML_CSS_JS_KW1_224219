@@ -152,3 +152,57 @@ const person3 = new PersonAlt("Luke Skywalker2", 49, true, "Cologne");
 // Diese Methode soll die derzeitige Geschwindigkeit auf neueGeschw setzen, außer wenn diese die maximale Geschwindigkeit 
 // überschreiten würde
 
+
+
+class Auto {
+    constructor(marke, modell, maxSpeed) {
+        this.marke = marke;
+        this.modell = modell;
+        this.maxSpeed = maxSpeed;
+        this.currSpeed = 0;
+        this.engineStatus = false;
+    }
+
+    onOff() {
+        this.engineStatus = !this.engineStatus;
+        console.log(`Motor ist jetzt ${this.engineStatus ? "an" : "aus"}`);
+    }
+    accelerate(newSpeed) {
+        if (this.engineStatus) {
+            if (newSpeed <= this.maxSpeed) {
+                this.currSpeed = newSpeed;
+        }
+            else {
+                console.error("Zu hohe Geschwindigkeit");
+            }
+        }
+        else {
+            console.log("Motor ist nicht an")
+        }
+    }
+}
+
+
+if (person1 instanceof Person){
+    console.log("person1 ist eine Person");
+}
+
+console.log(person1 instanceof Person); //true
+console.log(person1 instanceof Object); //true
+console.log(person1 instanceof PersonAlt);  //false
+
+//Prüfen ob eine bestimmte Property in einer Instanz enthalten
+
+
+console.log("age" in person1); //true, da person1 ein Prop - Name 'age' enthält
+
+
+//Wir können alle Propeties einer Klasse ausgeben 
+// for in Schleife
+// Sonderform der for Schleife
+for (prop in person3) {
+    console.log(`Prop-Name: ${prop} | Wert: ${person3[prop]}`);
+}
+
+
+console.table(person3);
