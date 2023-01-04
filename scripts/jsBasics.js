@@ -21,8 +21,8 @@ console.info("Ich bin eine Information!"); //Besondere Logausgaben -> Initalisie
 
 //Moderene Variante:
 
-let firstName = "Max";
-
+let firstName;
+firstName = "Max";
 //Syntax:
 //let identifier = Wert
 
@@ -93,6 +93,7 @@ console.log(zahl2++); //Zuerst wird die Variable ausgegeben und DANACH wird um d
 
 
 zahl2 = 10;
+zahl2 += 1; //11
 console.log(++zahl2); //Zuerst wird der Wert um 1 erhöht und danach wird der Wert ausgegeben
 
 //Modulo (Teilen mit Restbetrag)

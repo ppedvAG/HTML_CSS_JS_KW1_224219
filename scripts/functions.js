@@ -320,7 +320,8 @@ let square = (a) => a*a;
 console.log(square(12));
 
 function vervierfachen (a) {
-    return a * 4;
+    let ergebnis = a * 4;
+    return ergebnis;
 }
 
 function quadrieren (a) {
@@ -332,10 +333,11 @@ function quadrieren (a) {
 
 // wenn eine Lambda Funktion mehrzeilig wird, verliert sie einige ihrer Vorteile
 let mehrzeilig = (a, b) => {
-    a *=2;
+    a *=2; // a = a * 2;
     b *=2;
     return a *b;
 }
 
+console.log(mehrzeilig(3,4)); //48
 
-console.log(mehrzeilig(3,4));
+
