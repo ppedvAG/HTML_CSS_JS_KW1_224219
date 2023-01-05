@@ -43,3 +43,4 @@ function sayHi() {
 };
 
 document.querySelector("#d").addEventListener("click", sayHi);
+document.querySelector("#d").removeEventListener("click", sayHi);
