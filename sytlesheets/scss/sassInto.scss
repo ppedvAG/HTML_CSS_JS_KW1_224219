@@ -1,0 +1,93 @@
+//Sass Files enden in .scss
+
+//Dateien können import werden
+@import "variables"; 
+
+//Definiton von Variablen
+$bgcolor: lightblue;
+$textcolor : darkblue;
+$fontsize: 18px;
+
+
+//Verwendung von Variablen
+
+//background-color verwendet Platzhalter $bgColor und $textColor 
+body {
+    background-color: $bgColor;
+    color: $textColor;
+}
+
+:root {
+    font-size: $fontSize;
+}
+
+
+//Variablen können auch nur lokal verwendet werden 
+blockquote {
+    $textColor: blue;
+    $bgColor : white;
+
+    background-color: $bgColor;
+    color: $textColor;
+}
+
+//Beispiel 2: Verschachteln
+
+/*font-size / font-familiy / font-weight
+
+font: {
+    size: 18px;
+    family: Helvetica, sans-serif;
+    weight: bold;
+}
+
+/*
+CSS Ausgabe:
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold; 
+ */
+
+
+ /*Beispiel 3 - Vererbung*/
+
+ .button-basic
+ {
+    padding: 15px;
+    width: 25px;
+    height: 12px;
+ }
+
+ .button-report
+ {
+    //Alle Einstellung von .button-basic werden nach .button-report übernommen 
+    @extend .button-basic;
+
+    background-color:blue;
+ }
+
+ .button-alert
+ {
+     //Alle Einstellung von .button-basic werden nach .button-alert übernommen 
+     @extend .button-basic;
+
+     background-color:red;
+  }
+
+
+  //Beispiel 4
+
+  @mixin bordered($color, $width) {
+    border: $width solid $color;
+  }
+
+  .MyArticle {
+    @include bordered(blue, 1px);
+ }
+
+ .MyNotes {
+    @include bordered(red, 2px);
+ }
+
+
+
