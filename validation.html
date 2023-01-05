@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validierung von HTML-Elementen/Eingaben</title>
+    <script src="/scripts/validation.js" defer></script>
+
+</head>
+<body>
+    <!-- Beispiel 1: Keine Validierung in dem Sinne. Hier werden Eingabevorschläge unterbreitet -->
+    <p>Das list-Attribut verlinkt unsere input-Elemente mit der datalist, die automatisch Ergänzungen vorschlägt</p> 
+    <input list="fruits" placeholder="Früchte" type="text" id="fruit-choice" />
+    <datalist id="fruits">
+        <option value="Banane"></option>
+        <option value="Kirsche"></option>
+        <option value="Erdbeere"></option>
+        <option value="Apfel"></option>
+    </datalist>
+
+    <!-- Beispiel 2: Textbox Validierungen -->
+    <form>
+        <!-- Wenn eine Input-Element mit dem Attribute Required versehen ist, darf dieses Feld nicht leer sein -->
+        <input type="text" required id="ice-cream" placeholder="Welche Eissorte magst du?">
+
+        <input type="password" required minlength="8" placeholder="password" id="password">
+        <input type="submit" id="submit-button" value="Absenden">
+    </form>
+
+
+    <form>
+        <input type="text" id="zipCode" placeholder="PLZ">
+        <select id="country">
+            <option value="ch">Schweiz</option>
+            <option value="de">Deutschland</option>
+            <option value="fr">Frankreich</option>
+        </select>
+        <input type="submit" value="Absenden">
+    </form>
+
+
+    <form>
+        <!-- autocomplete-Attribut bei password -->
+        <!-- Haben drei gültige Werte: -->
+        <!-- 
+            "current-password" - Browser wird, falls ein Passwort gespeichert ist, vorschlagen dieses einzufügen
+            "old-password" - Browser wird bis jetzt gespeichertes Passwort einfügen
+            "new-password" - Browser wird fragen ob er dieses Passwort in Zukunft speichern soll
+        -->
+
+        <input type="password" name="password" id="passwordEx" minlength="8" placeholder="Passwort">
+        <input type="password" name="confirmation" id="confirmation" placeholder="Passwort bestätigen">
+        <input type="submit" value="Anmelden" id="pwSubmit" class="button submit form stuff">
+    </form>
+</body>
+</html>
