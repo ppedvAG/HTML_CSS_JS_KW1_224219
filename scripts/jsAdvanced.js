@@ -84,6 +84,12 @@ class Student extends AdvancedPerson {
         super.introduceSelf();
         console.log(`My name is ${this.firstName} and I'm in class ${this.schoolClass}`);
     }
+
+     // Trick zur Überladung: https://www.geeksforgeeks.org/function-overloading-in-javascript/
+     //Überladen ist einer Methode ist in JS nicht vorgesehen -> es gibt aber ein Workarround (Trick) ->
+     introduceSelf(test) {
+        console.log(test);
+    }
     
 }
 
@@ -92,5 +98,7 @@ const student1 = new Student("Otto", "Walkes", 55, "male", "11b");
 student1.introduceSelf();
 
 
-
+// Erstellt eine Klasse Teacher, die von Person abgeleitet wird und zusätzlich ein private field mit subject hat
+// Die Methode introduceSelf() soll erweiter oder überschrieben werden um zusätzlich das subject anzuzeigen
+// Zusätzlich einen getter und setter für subject erstellen
 
