@@ -68,6 +68,29 @@ const p2 = new AdvancedPerson ("Max", "Mustermann", 29, "male");
 p2.introduceSelf();
 
 
+class Student extends AdvancedPerson {
+    
+    constructor(firstName, lastName, age, genger, schoolClass) {
+        super(firstName, lastName, age, genger)
+
+        this.schoolClass = schoolClass;
+    }
+
+    showGrade() {
+        return Math.floor(Math.random() * 6) + 1;
+    }
+
+    introduceSelf() {
+        super.introduceSelf();
+        console.log(`My name is ${this.firstName} and I'm in class ${this.schoolClass}`);
+    }
+    
+}
+
+const student1 = new Student("Otto", "Walkes", 55, "male", "11b");
+
+student1.introduceSelf();
+
 
 
 
